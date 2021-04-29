@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, shrink-to-fit=9">
+		<meta name="description" content="Gambolthemes">
+		<meta name="author" content="Gambolthemes">
+		<title>underestiMadeIt - Single Discussion View</title>
+		
+		<!-- Favicon Icon -->
+		<link rel="icon" type="image/png" href="images/fav.png">
+		
+		<!-- Stylesheets -->
+		<link href="css/responsive.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<link href="css/datepicker.min.css" rel="stylesheet">
+		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+		<link href="vendor/OwlCarousel/assets/owl.carousel.css" rel="stylesheet">
+		<link href="vendor/OwlCarousel/assets/owl.theme.default.min.css" rel="stylesheet">
+	
+	</head>
+
+	<body>
+		<!-- Add Discussion Model Start -->
+		<div class="main-discussion-model">
+			<div class="modal fade" id="add-discussion-model" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">Add New Topic</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						  <div class="modal-body">
+							<div class="container">
+								<div class="row">
+									<div class="col-md-12">
+										<div class="form-group">									
+											<input class="title-discussion-input" type="text" placeholder="What is this discussion about in one brief sentence?">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">									
+											<div class="select-bg">									
+												<select class="wide" style="display: none;">
+													<option>Select Category</option>	
+													<option>Music</option>
+													<option>Festival</option>
+													<option>Art</option>
+													<option>Club</option>
+													<option>Comedey</option>
+													<option>Sports</option>
+													<option>Theatre</option>
+													<option>Promotions</option>																					
+													<option>Others</option>																					
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">									
+											<div class="select-bg">									
+												<select class="wide" style="display: none;">
+													<option value="Music">Music</option>
+													<option value="Singer">Singer</option>
+													<option value="Cricketer">Cricketer</option>
+													<option value="Show">Show</option>
+													<option value="Social">Social</option>
+													<option value="NGO">NGO</option>
+													<option value="Art">Art</option>
+													<option value="Writer">Writer</option>
+													<option value="Tv">Tv</option>
+													<option value="Tech">Tech</option>
+													<option value="Fashion">Fashion</option>
+													<option value="Beauty">Beauty</option>
+													<option value="Health and Fitness">Health and Fitness</option>
+													<option value="Festival">Festival</option>
+													<option value="Film Promotion">Film Promotion</option>
+													<option value="Comedy">Comedy</option>
+													<option value="Club">Club</option>
+													<option value="Ilets">Ilets</option>
+													<option value="Minister">Minister</option>
+													<option value="Gym">Gym</option>
+													<option value="Fitness Model">Fitness Model</option>
+													<option value="Signing">Signing</option>
+													<option value="Hockey">Hockey</option>
+													<option value="Cricket">Cricket</option>
+													<option value="Kushti">Kushti</option>
+													<option value="Kabbadi">Kabbadi</option>
+													<option value="Wrestling">Wrestling</option>
+													<option value="Volyball">Volyball</option>
+													<option value="Baseball">Baseball</option>
+													<option value="Sports">Sports</option>
+													<option value="Restaurant">Restaurant</option>
+													<option value="Hotel">Hotel</option>
+													<option value="Cafe">Cafe</option>
+													<option value="Cloths">Cloths</option>
+													<option value="Author">Author</option>
+													<option value="Company">Company</option>
+													<option value="Ecommerce">Ecommerce</option>
+													<option value="Actor">Actor</option>
+													<option value="Actress">Actress</option>																										
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="form-group">																		
+											<div class="screnshot" id="OpenImgUpload">
+												<input type="file" id="file">
+												<label for="file"><i class="far fa-image"></i> Add Image</label>														
+											</div>										
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="form-group">																		
+											<textarea class="replt-comnt" placeholder="You must select a category before typing here..."></textarea>									
+										</div>
+									</div>
+								</div>
+							</div>
+						  </div>
+						<div class="modal-footer">							
+							<button type="button" class="create-topic">Save changes</button>
+							<button type="button" class="create-topic-cancel" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<!-- Add Discussion Model End -->
+		<!-- Header Start -->
+		<header>
+			<div class="container">				
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12">
+						<nav class="navbar navbar-expand-lg navbar-light bg-dark1 justify-content-sm-start">
+							<!-- <a class="order-1 order-lg-0 ml-lg-0 ml-3 mr-auto" href="index.html"><img src="images/logoDemo.png" alt=""></a> -->
+							<button class="navbar-toggler align-self-start" type="button">
+								<i class="fas fa-bars"></i>
+							</button>
+							<div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end bg-dark1 p-3 p-lg-0 mt1-5 mt-lg-0 mobileMenu" id="navbarSupportedContent">
+								<ul class="navbar-nav align-self-stretch">
+									<li class="nav-item active">
+										<a class="nav-link" href="/main">Home <span class="sr-only">(current)</span></a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="/discussions">Discussion</a>
+									</li>									
+									<li class="nav-item">
+										<a class="nav-link" href="/about">About</a>
+									</li>
+									<!-- <li class="nav-item dropdown">
+										<a href="#" class="nav-link dropdown-toggle-no-caret" role="button" data-toggle="dropdown">
+											Pages
+										</a>
+										<div class="dropdown-menu pages-dropdown">
+											<a class="link-item" href="/login">Login</a>
+											<a class="link-item" href="/signup">Register</a>											
+											<a class="link-item" href="categories.html">Support</a>
+											<a class="link-item" href="find_friends.html">Find Friends</a>
+											<a class="link-item" href="user_dashboard_activity.html">User Detail View</a>
+											<a class="link-item" href="about.html">About</a>
+											<a class="link-item" href="contact_us.html">Contact</a>
+										</div>
+									</li> -->
+									<li class="nav-item">
+										<a class="nav-link" href="our_blog.html">Blog</a>
+									</li>
+								</ul>
+								<a href="/addNewEvent" class="add-event">Add New Event</a>
+							</div>
+							<!-- <ul class="group-icons">
+								<li><a href="search_result.html" class="icon-set"><i class="fas fa-search"></i></a></li>
+								<li class="dropdown">
+									<a href="#" class="icon-set dropdown-toggle-no-caret" role="button" data-toggle="dropdown">
+										<i class="fas fa-user-plus"></i>
+									</a> -->
+									<!-- <div class="dropdown-menu user-request-dropdown dropdown-menu-right">
+										<div class="user-request-list">
+											<div class="request-users">
+												<div class="user-request-dt">
+													<a href="#"><img src="images/user-dp-1.jpg" alt=""></a>
+													<a href="#" class="user-title">Jassica William</a>
+												</div>
+												<button class="accept-btn">Accept</button>
+											</div>											
+										</div>	
+										<div class="user-request-list">
+											<div class="request-users">
+												<div class="user-request-dt">
+													<a href="#"><img src="images/user-dp-1.jpg" alt=""></a>
+													<a href="#" class="user-title">Rock Smith</a>
+												</div>
+												<button class="accept-btn">Accept</button>
+											</div>											
+										</div>	
+										<div class="user-request-list">
+											<div class="request-users">
+												<div class="user-request-dt">
+													<a href="#"><img src="images/user-dp-1.jpg" alt=""></a>
+													<a href="#" class="user-title">Joy Doe</a>
+												</div>
+												<button class="accept-btn">Accept</button>
+											</div>											
+										</div>
+										<div class="user-request-list">
+											<a href="my_dashboard_all_requests.html" class="view-all">View All Friend Requests</a>
+										</div>	
+									</div> -->
+								<!-- </li>
+								<li class="dropdown">
+									<a href="#" class="icon-set dropdown-toggle-no-caret" role="button" data-toggle="dropdown">
+										<i class="fas fa-envelope"></i>
+									</a> -->
+									<!-- <div class="dropdown-menu message-dropdown dropdown-menu-right">
+										<div class="user-request-list">
+											<div class="request-users">
+												<div class="user-request-dt">
+													<a href="#"><img src="images/user-dp-1.jpg" alt="">
+														<div class="user-title1">Jassica William </div>
+														<span>Hey How are you John Doe...</span>
+													</a>
+												</div>
+												<div class="time5">2 min ago</div>
+											</div>											
+										</div>
+										<div class="user-request-list">
+											<div class="request-users">
+												<div class="user-request-dt">
+													<a href="#"><img src="images/user-dp-1.jpg" alt="">
+														<div class="user-title1">Rock Smith </div>
+														<span>Interesting Event! I will join this...</span>
+													</a>
+												</div>
+												<div class="time5">5 min ago</div>
+											</div>											
+										</div>	
+										<div class="user-request-list">
+											<div class="request-users">
+												<div class="user-request-dt">
+													<a href="#"><img src="images/user-dp-1.jpg" alt="">
+														<div class="user-title1">Joy Doe </div>
+														<span>Hey Sir! What about you...</span>
+													</a>
+												</div>
+												<div class="time5">10 min ago</div>
+											</div>											
+										</div>	
+										<div class="user-request-list">
+											<a href="my_dashboard_messages.html" class="view-all">View All Messages</a>
+										</div>	
+									</div> -->
+								<!-- </li>
+								<li class="dropdown">
+									<a href="#" class="icon-set dropdown-toggle-no-caret" role="button" data-toggle="dropdown">
+										<i class="fas fa-bell"></i>
+									</a> -->
+									<div class="dropdown-menu notification-dropdown dropdown-menu-right">
+										<!-- <div class="user-request-list">
+											<div class="request-users">
+												<div class="user-request-dt">
+													<a href="#"><img src="images/user-dp-1.jpg" alt="">
+														<div class="user-title1">Jassica William </div>
+														<span>comment on your video.</span>
+													</a>
+												</div>
+												<div class="time5">2 min ago</div>
+											</div>											
+										</div>
+										<div class="user-request-list">
+											<div class="request-users">
+												<div class="user-request-dt">
+													<a href="#"><img src="images/user-dp-1.jpg" alt="">
+														<div class="user-title1">Rock Smith</div>
+														<span>your order is accepted.</span>
+													</a>
+												</div>
+												<div class="time5">5 min ago</div>
+											</div>											
+										</div>	
+										<div class="user-request-list">
+											<div class="request-users">
+												<div class="user-request-dt">
+													<a href="#"><img src="images/user-dp-1.jpg" alt="">
+														<div class="user-title1">Joy Doe </div>
+														<span>your bill slip sent on your email.</span>
+													</a>
+												</div>
+												<div class="time5">10 min ago</div>
+											</div>											 -->
+										<!-- </div>	 -->
+										<!-- <div class="user-request-list">
+											<a href="my_dashboard_all_notifications.html" class="view-all">View All Notifications</a>
+										</div>	 -->
+									</div>
+								</li>
+							</ul>
+							<div class="account order-1 dropdown">
+								<a href="#" class="account-link dropdown-toggle-no-caret" role="button" data-toggle="dropdown"> 
+									<div class="user-dp"><img src="images/propic.jpg" alt=""></div>
+									<span>Hi <%=user.first%><%=user.last%>!</span>
+									<i class="fas fa-angle-down"></i>
+								</a>
+								<div class="dropdown-menu account-dropdown dropdown-menu-right">
+									<a class="link-item" href="my_dashboard_activity.html">Profile</a>
+									<!-- <a class="link-item" href="my_dashboard_messages.html">Messages</a>											
+									<a class="link-item" href="my_dashboard_booked_events.html">Booked Events</a>
+									<a class="link-item" href="invite.html">Invite</a> -->
+									<a class="link-item" href="/my-dashboard-setting">Setting</a>
+									<a class="link-item" href="/login">Logout</a>									
+								</div>
+							</div>							
+						</nav>
+						<div class="overlay"></div>
+					</div>					
+				</div>					
+			</div>
+		</header>
+		<!-- Header End -->
+		<!-- Title Bar Start -->
+		<div class="title-bar">			
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<ol class="title-bar-text">
+							<li class="breadcrumb-item"><a href="/main">Home</a></li>
+							<li class="breadcrumb-item"><a href="/discussions">Discussion</a></li>
+							<li class="breadcrumb-item active" aria-current="page">Single Discussion View</li>
+						</ol>
+					</div>		
+				</div>		
+			</div>		
+		</div>		
+		<!-- Title Bar End -->
+		<!-- Body Start -->	
+		<main class="discussion-mp">	
+			<div class="main-section">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3 col-md-4">
+							<button class="add-topic" type="button" data-toggle="modal" data-target="#add-discussion-model">Add New Topic</button>
+							<div class="topic-categories-bg">								
+								<a href="#" class="category-topics active">All</a>																					
+								<a href="#collapse1" class="category-topics cate-right" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse1">All Tags</a>	
+								<div class="collapse" id="collapse1">
+									<ul class="tag-card">
+										<li><a href="#" class="tag-item1">Music</a></li>
+										<li><a href="#" class="tag-item1">Singer</a></li>
+										<li><a href="#" class="tag-item1">Cricketer</a></li>
+										<li><a href="#" class="tag-item1">Show</a></li>
+										<li><a href="#" class="tag-item1">Social</a></li>
+										<li><a href="#" class="tag-item1">Art</a></li>
+										<li><a href="#" class="tag-item1">Tv</a></li>
+										<li><a href="#" class="tag-item1">Tech</a></li>
+										<li><a href="#" class="tag-item1">Fashion</a></li>
+										<li><a href="#" class="tag-item1">Beauty</a></li>
+										<li><a href="#" class="tag-item1">Health and Fitness</a></li>
+										<li><a href="#" class="tag-item1">Festival</a></li>
+										<li><a href="#" class="tag-item1">Film Promotion</a></li>										
+										<li><a href="#" class="tag-item1">Comedey</a></li>										
+										<li><a href="#" class="tag-item1">Club</a></li>										
+										<li><a href="#" class="tag-item1">Ilets</a></li>																			
+									</ul>
+								</div>
+								<a href="#collapse2" class="category-topics cate-right" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse2">Categories</a>								
+									<div class="collapse" id="collapse2">
+									<ul class="category-card">
+										<li><a href="#" class="category-item1">Music</a></li>																												
+										<li><a href="#" class="category-item1">Festival</a></li>																												
+										<li><a href="#" class="category-item1">Art</a></li>																												
+										<li><a href="#" class="category-item1">Club</a></li>																												
+										<li><a href="#" class="category-item1">Comedey</a></li>																												
+										<li><a href="#" class="category-item1">Sports</a></li>																												
+										<li><a href="#" class="category-item1">Theatre</a></li>																												
+										<li><a href="#" class="category-item1">Promotions</a></li>																												
+										<li><a href="#" class="category-item1">Others</a></li>																												
+									</ul>
+								</div>
+								<a href="#" class="category-topics">Latest</a>								
+								<a href="#" class="category-topics">New(22)</a>								
+								<a href="#" class="category-topics">Unread(3)</a>								
+								<a href="#" class="category-topics">Top</a>	
+								
+								<h1>test</h1>
+							</div>
+							<div class="google-ads-left">
+								<img src="images/discussion/ads.jpg" alt="">
+							</div>
+						</div>
+						<div class="col-lg-9 col-md-8">	
+							<div class="all-discussions">									
+								<div class="single-discussions-item">
+									<div class="dis-item-view">
+										<div class="row no-gutters">
+											<div class="col-lg-12 col-md-12 col-sm-12">
+												<div class="dis-img-text-view">
+													<img src="images/discussion/img-1.jpg" alt="">
+													<a href="#"><h4><%= user.first %> <%= user.last %> </h4></a>
+												</div>
+												<div class="dis-title">
+													<h2><%= info.name %> <h2>
+                                                    <h1> <%= info.description %> </h1>
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel erat eget purus vestibulum malesuada. Aliquam convallis metus et consectetur varius. Fusce velit ligula, imperdiet vitae vestibulum ut, porta non mi. Etiam justo odio, maximus nec rutrum quis, luctus at orci. Aliquam erat volutpat. Sed eu aliquet justo. Cras lectus nulla, aliquam eget tempus pulvinar, auctor non turpis. Proin semper, justo at faucibus suscipit, metus libero blandit neque, eu mattis tortor diam in risus. Donec fringilla venenatis libero in efficitur.</p>
+													<button type="submit" id="delete">Delete <span class="id" style="display:none;" ><%=info._id%></span></button> 
+
+												</div>
+												<div class="dis-like-comments">
+													<div class="left-comments">
+														<a href="#" class="like-item" title="Like">
+															<i class="fas fa-heart"></i>
+															<span><ins>Like</ins> 12</span>
+
+														</a>
+														<a href="#" class="like-item lc-left" title="Comment">
+															<i class="fas fa-comment-alt"></i>
+															<span><ins>Reply</ins> 01</span>
+														</a>
+													</div>
+													<div class="right-comments">
+														<a href="#" class="like-item" title="Share">
+															<i class="fas fa-eye"></i>
+															<span><ins>View</ins> 20</span>
+														</a>
+														<a href="#" class="like-item lc-left" title="Share">
+															<i class="fas fa-share-alt"></i>
+															<span><ins>Share link</ins> 05</span>
+														</a>
+													</div>
+												</div>
+												<div class="main-reply-comment">
+													<h4>Reply</h4>
+													<form id="newComment" action="/createComment" method="POST">
+														<textarea class="replt-comnt" placeholder="Write a reply" name="comment" form="newComment"></textarea>
+														<div class="reply-buttons">
+															<div class="add-photo-button">
+																<div class="screnshot" id="OpenImgUpload">
+																	<input type="file" id="file">
+																	<label for="file"><i class="far fa-image"></i> Add Image</label>														
+																</div>
+															</div>														
+															<div class="post-reply-btn">
+																<button class="btn-add-reply">Post</button>
+															</div>
+														</div>
+													</form>
+												</div>
+												<div class="main-replies">
+
+													<h4>1 Replies</h4>
+													<div class="reply-user-dt">
+														<%for (i = 0; i < comments.length; i++) { %>
+															<img src="images/discussion/img-3.jpg" alt="">
+															<a href="#"><h4><%=user.first%><%=user.last%></h4></a>
+														<p><%=comments[i].comment%></p>
+													<%}%>
+													</div>
+												</div>
+											</div>												
+										</div>	
+									</div>																										
+								</div>															
+							</div>	
+						</div>						
+					</div>
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="help-people-title">
+									<h2>Can You Help These People?</h2>
+								</div>							
+							</div>
+							<div class="owl-carousel blog-owl owl-theme">
+								<div class="item">
+									<div class="people-dts">
+										<img src="images/discussion/people-1.jpg" alt="">
+										<div class="reply-day">1 day</div>
+										<a href="#"><h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4></a>
+										<div class="rply-share">
+											<div class="left-comments">
+												<a href="#" class="like-item" title="Like">
+													<i class="fas fa-heart"></i>
+													<span><ins>Like</ins> 12</span>
+												</a>														
+											</div>
+											<div class="right-comments">
+												<a href="#" class="like-item lc-left" title="Comment">
+													<i class="fas fa-comment-alt"></i>
+													<span><ins>Reply</ins> 01</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="people-dts">
+										<img src="images/discussion/people-2.jpg" alt="">
+										<div class="reply-day">1 day</div>
+										<a href="#"><h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4></a>
+										<div class="rply-share">
+											<div class="left-comments">
+												<a href="#" class="like-item" title="Like">
+													<i class="fas fa-heart"></i>
+													<span><ins>Like</ins> 12</span>
+												</a>														
+											</div>
+											<div class="right-comments">
+												<a href="#" class="like-item lc-left" title="Comment">
+													<i class="fas fa-comment-alt"></i>
+													<span><ins>Reply</ins> 01</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="people-dts">
+										<img src="images/discussion/people-3.jpg" alt="">
+										<div class="reply-day">1 day</div>
+										<a href="#"><h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4></a>
+										<div class="rply-share">
+											<div class="left-comments">
+												<a href="#" class="like-item" title="Like">
+													<i class="fas fa-heart"></i>
+													<span><ins>Like</ins> 12</span>
+												</a>														
+											</div>
+											<div class="right-comments">
+												<a href="#" class="like-item lc-left" title="Comment">
+													<i class="fas fa-comment-alt"></i>
+													<span><ins>Reply</ins> 01</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="people-dts">
+										<img src="images/discussion/people-4.jpg" alt="">
+										<div class="reply-day">1 day</div>
+										<a href="#"><h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4></a>
+										<div class="rply-share">
+											<div class="left-comments">
+												<a href="#" class="like-item" title="Like">
+													<i class="fas fa-heart"></i>
+													<span><ins>Like</ins> 12</span>
+												</a>														
+											</div>
+											<div class="right-comments">
+												<a href="#" class="like-item lc-left" title="Comment">
+													<i class="fas fa-comment-alt"></i>
+													<span><ins>Reply</ins> 01</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- Body End -->			
+		<!-- Footer Start -->
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-md-12">
+						<div class="footer-left">
+							<ul>
+								<li><a href="privacy_policy.html">Privacy</a></li>
+								<li><a href="term_conditions.html">Term and Conditions</a></li>
+								<li><a href="about.html">About</a></li>
+								<li><a href="contact_us.html">Contact Us</a></li>								
+							</ul>
+						</div>
+					</div>					
+					<div class="col-lg-6 col-md-12">
+						<div class="footer-right">
+							<ul class="copyright-text">
+								<li><a href="index.html"><img src="images/logo-2.svg" alt=""></a></li>
+								<li><div class="ftr-1"><i class="far fa-copyright"></i> 2019 Goeveni by <a href="https://themeforest.net/user/gambolthemes">Gambolthemes</a>. All Rights Reserved.</div></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- Footer End -->
+		<!-- Scripts js -->	
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skills-search.js"></script>
+		<script src="js/jquery.nice-select.js"></script>
+		<script src="js/datepicker.min.js"></script>
+		<script src="js/i18n/datepicker.en.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="vendor/OwlCarousel/owl.carousel.js"></script>		
+		<script src="js/custom1.js"></script>
+		<script src="js/sdv.js"></script>
+		
+	</body>
+	
+</html>
