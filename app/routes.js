@@ -16,14 +16,14 @@ module.exports = function(app, passport, db, multer, storage, upload, ObjectId) 
 
 
     // HOME/FEED SECTION =========================
-    app.get('/singleDiscussionView', isLoggedIn, function(req, res) {
-        db.collection('posts').find().toArray((err, result) => {
-          db.collection('comments').find().toArray((error, rslt) => {
+    app.get('/discussions/:id', isLoggedIn, function(req, res) {
+        db.collection('topics').findOne({_id:ObjectId(req.params.id)},(err, result) => {
+          db.collection('comments').find({'topic': req.params.id }).toArray((error, rslt) => {
             if (err) return console.log(err)
             res.render('single-discussion-view.ejs', {
               user : req.user,
-              posts: result,
-              comment: rslt
+              info: result,
+              comments: rslt
             })
           })
         })
@@ -35,7 +35,7 @@ module.exports = function(app, passport, db, multer, storage, upload, ObjectId) 
         db.collection('messages').findOneAndUpdate({
             name: req.body.name,
             size: req.body.size,
-            order: req.body.order,
+            // order: req.body.order,
             completedBy: null
         },{
             $set: {completedBy: req.user.local.username}
@@ -43,7 +43,7 @@ module.exports = function(app, passport, db, multer, storage, upload, ObjectId) 
             sort:{_id: -1}},
         (err, result) => {
             if (err) return res.send(err)
-            console.log(`Order Completed`);
+            // console.log(`Order Completed`);
             res.send();
         }
         )
@@ -55,9 +55,13 @@ app.get('/my-dashboard-setting', isLoggedIn, function(req, res) {
 });
 
 
-    // Discussion Section
+// Discussion Section
     app.get('/discussions', isLoggedIn, function(req, res) {
-        res.render('discussions.ejs', {user:req.user});
+        db.collection('topics').find().toArray((err, result) => {
+            if (err) return console.log(err)
+            res.render('discussions.ejs', {user:req.user, topics:result});
+        })
+
     });
     // how to target discussions
     // app.get('/abc/:id', isLoggedIn, function(req, res) {
@@ -120,14 +124,14 @@ app.get('/my-dashboard-setting', isLoggedIn, function(req, res) {
             })
         })
     });
-    // var storage = multer.diskStorage({
-    //     destination: (req, file, cb) => {
-    //     cb(null, 'public/img/')
-    //     },
-    //     filename: (req, file, cb) => {
-    //     cb(null, file.fieldname + '-' + Date.now() + ".png")
-    //     }
-    // })
+    var storage = multer.diskStorage({
+        destination: (req, file, cb) => {
+        cb(null, 'public/img/')
+        },
+        filename: (req, file, cb) => {
+        cb(null, file.fieldname + '-' + Date.now() + ".png")
+        }
+    })
     var upload = multer({storage: storage})
     app.post('/createTopic', upload.single('file-to-upload'), (req, res) => {
       db.collection('topics').save({
@@ -167,7 +171,7 @@ const path = require('path')
 app.post('/createEvent', upload.single('file-to-upload'), (req, res) => {
     console.log(req)
     db.collection('events').save({
-      image: "/uploads/file-to-upload-"+ Date.now() + path.extname(req.file.filename),
+      image: "/img/"+ req.file.filename,
       name: req.body.name,
       user: req.user._id,
       description: req.body.description,
@@ -295,19 +299,19 @@ app.post('/createEvent', upload.single('file-to-upload'), (req, res) => {
             res.redirect('/');
         });
     });
-    app.get('/:id', isLoggedIn, function(req, res) {
-        // console.log(req)
-        // console.log(req.params);
-        // console.log(req.query);
-            // look inside topics and find specific id
-        db.collection("topics").findOne({_id:ObjectId(req.params.id)}, (err, result)=>{
-            db.collection('comments').find({'topic': req.params.id }).toArray((err, result2) => {
-                if (err) return console.log(err)
-                console.log(result2)
-                res.render('single-discussion-view.ejs', {info:result, user:req.user.local, comments: result2} );
-          })
-        })
-    });
+//     app.get('/:id', isLoggedIn, function(req, res) {
+//         // console.log(req)
+//         // console.log(req.params);
+//         // console.log(req.query);
+//             // look inside topics and find specific id
+//         db.collection("topics").findOne({_id:ObjectId(req.params.id)}, (err, result)=>{
+//             db.collection('comment').find({'topic': req.params.id }).toArray((err, result2) => {
+//                 if (err) return console.log(err)
+//                 console.log(result2)
+//                 res.render('single-discussion-view.ejs', {info:result, user:req.user.local, comments: result2} );
+//           })
+//         })
+//     });
 };
 
 

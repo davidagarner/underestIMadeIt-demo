@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, shrink-to-fit=9">
 		<meta name="description" content="Gambolthemes">
 		<meta name="author" content="Gambolthemes">
-		<title>underestIMadeIt - Add New Event</title>
+		<title>Goeveni - Add New Event</title>
 		
 		<!-- Favicon Icon -->
 		<link rel="icon" type="image/png" href="images/fav.png">
@@ -30,47 +30,45 @@
 				<div class="row">
 					<div class="col-lg-12 col-md-12 col-sm-12">
 						<nav class="navbar navbar-expand-lg navbar-light bg-dark1 justify-content-sm-start">
-							<!-- <a class="order-1 order-lg-0 ml-lg-0 ml-3 mr-auto" href="index.html"><img src="images/logoDemo.png" alt=""></a> -->
+							<a class="order-1 order-lg-0 ml-lg-0 ml-3 mr-auto" href="index.html"><img src="images/logo.svg" alt=""></a>
 							<button class="navbar-toggler align-self-start" type="button">
 								<i class="fas fa-bars"></i>
 							</button>
 							<div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end bg-dark1 p-3 p-lg-0 mt1-5 mt-lg-0 mobileMenu" id="navbarSupportedContent">
 								<ul class="navbar-nav align-self-stretch">
 									<li class="nav-item active">
-										<a class="nav-link" href="/main">Home <span class="sr-only">(current)</span></a>
+										<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
 									</li>
 									<li class="nav-item">
-										<a class="nav-link" href="/discussions">Discussion</a>
+										<a class="nav-link" href="discussions.html">Discussion</a>
 									</li>									
-									<li class="nav-item">
-										<a class="nav-link" href="/about">About</a>
-									</li>
-									<!-- <li class="nav-item dropdown">
+								
+									<li class="nav-item dropdown">
 										<a href="#" class="nav-link dropdown-toggle-no-caret" role="button" data-toggle="dropdown">
 											Pages
 										</a>
 										<div class="dropdown-menu pages-dropdown">
-											<a class="link-item" href="/login">Login</a>
-											<a class="link-item" href="/signup">Register</a>											
+											<a class="link-item" href="login.html">Login</a>
+											<a class="link-item" href="register.html">Register</a>											
 											<a class="link-item" href="categories.html">Support</a>
 											<a class="link-item" href="find_friends.html">Find Friends</a>
 											<a class="link-item" href="user_dashboard_activity.html">User Detail View</a>
 											<a class="link-item" href="about.html">About</a>
 											<a class="link-item" href="contact_us.html">Contact</a>
 										</div>
-									</li> -->
+									</li>
 									<li class="nav-item">
 										<a class="nav-link" href="our_blog.html">Blog</a>
 									</li>
 								</ul>
-								<a href="/addNewEvent" class="add-event">Add New Event</a>
+								<a href="add_new_event.html" class="add-event">Add New Event</a>
 							</div>
-							<!-- <ul class="group-icons">
+							<ul class="group-icons">
 								<li><a href="search_result.html" class="icon-set"><i class="fas fa-search"></i></a></li>
 								<li class="dropdown">
 									<a href="#" class="icon-set dropdown-toggle-no-caret" role="button" data-toggle="dropdown">
 										<i class="fas fa-user-plus"></i>
-									</a> -->
+									</a>
 									<!-- <div class="dropdown-menu user-request-dropdown dropdown-menu-right">
 										<div class="user-request-list">
 											<div class="request-users">
@@ -103,11 +101,11 @@
 											<a href="my_dashboard_all_requests.html" class="view-all">View All Friend Requests</a>
 										</div>	
 									</div> -->
-								<!-- </li>
+								</li>
 								<li class="dropdown">
 									<a href="#" class="icon-set dropdown-toggle-no-caret" role="button" data-toggle="dropdown">
 										<i class="fas fa-envelope"></i>
-									</a> -->
+									</a>
 									<!-- <div class="dropdown-menu message-dropdown dropdown-menu-right">
 										<div class="user-request-list">
 											<div class="request-users">
@@ -146,11 +144,11 @@
 											<a href="my_dashboard_messages.html" class="view-all">View All Messages</a>
 										</div>	
 									</div> -->
-								<!-- </li>
+								</li>
 								<li class="dropdown">
 									<a href="#" class="icon-set dropdown-toggle-no-caret" role="button" data-toggle="dropdown">
 										<i class="fas fa-bell"></i>
-									</a> -->
+									</a>
 									<div class="dropdown-menu notification-dropdown dropdown-menu-right">
 										<!-- <div class="user-request-list">
 											<div class="request-users">
@@ -185,25 +183,25 @@
 												<div class="time5">10 min ago</div>
 											</div>											 -->
 										<!-- </div>	 -->
-										<!-- <div class="user-request-list">
+										<div class="user-request-list">
 											<a href="my_dashboard_all_notifications.html" class="view-all">View All Notifications</a>
-										</div>	 -->
+										</div>	
 									</div>
 								</li>
 							</ul>
 							<div class="account order-1 dropdown">
 								<a href="#" class="account-link dropdown-toggle-no-caret" role="button" data-toggle="dropdown"> 
-									<div class="user-dp"><img src="images/propic.jpg" alt=""></div>
-									<span>Hi <%=user.local.first%><%=user.local.last%>!</span>
+									<div class="user-dp"><img src="images/dp.jpg" alt=""></div>
+									<span>Hi! John</span>
 									<i class="fas fa-angle-down"></i>
 								</a>
 								<div class="dropdown-menu account-dropdown dropdown-menu-right">
 									<a class="link-item" href="my_dashboard_activity.html">Profile</a>
-									<!-- <a class="link-item" href="my_dashboard_messages.html">Messages</a>											
+									<a class="link-item" href="my_dashboard_messages.html">Messages</a>											
 									<a class="link-item" href="my_dashboard_booked_events.html">Booked Events</a>
-									<a class="link-item" href="invite.html">Invite</a> -->
-									<a class="link-item" href="/my-dashboard-setting">Setting</a>
-									<a class="link-item" href="/login">Logout</a>									
+									<a class="link-item" href="invite.html">Invite</a>
+									<a class="link-item" href="my_dashboard_setting_info.html">Setting</a>
+									<a class="link-item" href="login.html">Logout</a>									
 								</div>
 							</div>							
 						</nav>
@@ -219,7 +217,7 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<ol class="title-bar-text">
-							<li class="breadcrumb-item"><a href="/main">Home</a></li>							
+							<li class="breadcrumb-item"><a href="index.html">Home</a></li>							
 							<li class="breadcrumb-item active" aria-current="page">Add New Event</li>
 						</ol>
 					</div>		
@@ -237,14 +235,14 @@
 								<h2>Add New Event</h2>								
 							</div>
 							<div class="add-event-bg">
-								<form enctype="multipart/form-data" method="post" action="/createEvent">
+								<form>
 									<div class="input-section-item">
 										<div class="add-input-title">								
 											<i class="fas fa-pencil-alt"></i>
 											<h6>Title*</h6>
 										</div>
 										<div class="add-input-items">
-											<input class="add-inputs" type="text" placeholder="Event Title Here" name="title">
+											<input class="add-inputs" type="text" placeholder="Event Title Here">
 										</div>
 									</div>
 									<div class="input-section-item">
@@ -253,14 +251,14 @@
 											<h6>Description*</h6>
 										</div>
 										<div class="add-input-items">
-											<textarea class="add-event-des" placeholder="Description here" name="description"></textarea>
+											<textarea class="add-event-des" placeholder="Description here"></textarea>
 										</div>
 									</div>
 											<div class="add-evnt-dt">											
 													<div class="row">											
 														<div class="col-md-6">											
-															<div class="select-bg mt-20" name="startTime" >			<section class="start" name="startTime" >						
-																<select class="wide" style="display: none;  ">
+															<div class="select-bg mt-20">									
+																<select class="wide" style="display: none;">
 																	<option>Start Time</option>	
 																	<option>12.00 AM</option>																																
 																	<option>12.30 AM</option>																																
@@ -310,11 +308,10 @@
 																<option>11.00 PM</option>																																
 																<option>11.30 PM</option>																																								
 															</select>
-														</section>
 														</div>																					
 													</div>
 													<div class="col-md-6">											
-														<div class="select-bg mt-20">								<section class="end" name="endTime" >
+														<div class="select-bg mt-20">									
 															<select class="wide" style="display: none;">
 																<option>End Time</option>	
 																<option>12.00 AM</option>																																
@@ -365,7 +362,6 @@
 																<option>11.00 PM</option>																																
 																<option>11.30 PM</option>																																								
 															</select>
-														</section>
 														</div>																							
 													</div>
 												</div>
@@ -384,10 +380,8 @@
 													<img src="images/add-img.jpg" alt="">
 												</div>
 												<div class="addpic" id="OpenImgUpload">
-													<input type="file" id="file" name="file-to-upload">
+													<input type="file" id="file">
 													<label for="file">Choose File</label>
-													<input type="submit" value="Upload" placeholder="">
-
 													<p>Maximum file size : 1 MB</p>
 												</div>
 											</div>
@@ -427,7 +421,14 @@
 							</ul>
 						</div>
 					</div>					
-
+					<div class="col-lg-6 col-md-12">
+						<div class="footer-right">
+							<ul class="copyright-text">
+								<li><a href="index.html"><img src="images/logo-2.svg" alt=""></a></li>
+								<li><div class="ftr-1"><i class="far fa-copyright"></i> 2019 Goeveni by <a href="https://themeforest.net/user/gambolthemes">Gambolthemes</a>. All Rights Reserved.</div></li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
 		</footer>

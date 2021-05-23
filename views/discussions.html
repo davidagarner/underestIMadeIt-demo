@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 	<head>
@@ -7,19 +7,19 @@
 		<meta name="viewport" content="width=device-width, shrink-to-fit=9">
 		<meta name="description" content="Gambolthemes">
 		<meta name="author" content="Gambolthemes">
-		<title>underestiMadeIt - Single Discussion View</title>
+		<title>Goeveni - All Discussions</title>
 		
 		<!-- Favicon Icon -->
 		<link rel="icon" type="image/png" href="images/fav.png">
 		
 		<!-- Stylesheets -->
-		<link href="/css/responsive.css" rel="stylesheet">
-		<link href="/css/style.css" rel="stylesheet">
-		<link href="/css/datepicker.min.css" rel="stylesheet">
-		<link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-		<link href="/vendor/OwlCarousel/assets/owl.carousel.css" rel="stylesheet">
-		<link href="/vendor/OwlCarousel/assets/owl.theme.default.min.css" rel="stylesheet">
+		<link href="css/responsive.css" rel="stylesheet">
+		<link href="public/css/style.css" rel="stylesheet">
+		<link href="css/datepicker.min.css" rel="stylesheet">
+		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+		<link href="vendor/OwlCarousel/assets/owl.carousel.css" rel="stylesheet">
+		<link href="vendor/OwlCarousel/assets/owl.theme.default.min.css" rel="stylesheet">
 	
 	</head>
 
@@ -139,34 +139,45 @@
 				<div class="row">
 					<div class="col-lg-12 col-md-12 col-sm-12">
 						<nav class="navbar navbar-expand-lg navbar-light bg-dark1 justify-content-sm-start">
-							<!-- <a class="order-1 order-lg-0 ml-lg-0 ml-3 mr-auto" href="index.html"><img src="images/logoDemo.png" alt=""></a> -->
+							<a class="order-1 order-lg-0 ml-lg-0 ml-3 mr-auto" href="index.html"><img src="images/logo.svg" alt=""></a>
 							<button class="navbar-toggler align-self-start" type="button">
 								<i class="fas fa-bars"></i>
 							</button>
 							<div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end bg-dark1 p-3 p-lg-0 mt1-5 mt-lg-0 mobileMenu" id="navbarSupportedContent">
 								<ul class="navbar-nav align-self-stretch">
 									<li class="nav-item active">
-										<a class="nav-link" href="/main">Home <span class="sr-only">(current)</span></a>
+										<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
 									</li>
 									<li class="nav-item">
-										<a class="nav-link" href="/discussions">Discussion</a>
+										<a class="nav-link" href="discussions.html">Discussion</a>
 									</li>									
-									<li class="nav-item">
-										<a class="nav-link" href="/about">About</a>
+								
+									<li class="nav-item dropdown">
+										<a href="#" class="nav-link dropdown-toggle-no-caret" role="button" data-toggle="dropdown">
+											Pages
+										</a>
+										<div class="dropdown-menu pages-dropdown">
+											<a class="link-item" href="login.html">Login</a>
+											<a class="link-item" href="register.html">Register</a>											
+											<a class="link-item" href="categories.html">Support</a>
+											<a class="link-item" href="find_friends.html">Find Friends</a>
+											<a class="link-item" href="user_dashboard_activity.html">User Detail View</a>
+											<a class="link-item" href="about.html">About</a>
+											<a class="link-item" href="contact_us.html">Contact</a>
+										</div>
 									</li>
-							
 									<li class="nav-item">
 										<a class="nav-link" href="our_blog.html">Blog</a>
 									</li>
 								</ul>
-								<a href="/addNewEvent" class="add-event">Add New Event</a>
+								<a href="add_new_event.html" class="add-event">Add New Event</a>
 							</div>
-							<!-- <ul class="group-icons">
+							<ul class="group-icons">
 								<li><a href="search_result.html" class="icon-set"><i class="fas fa-search"></i></a></li>
 								<li class="dropdown">
 									<a href="#" class="icon-set dropdown-toggle-no-caret" role="button" data-toggle="dropdown">
 										<i class="fas fa-user-plus"></i>
-									</a> -->
+									</a>
 									<!-- <div class="dropdown-menu user-request-dropdown dropdown-menu-right">
 										<div class="user-request-list">
 											<div class="request-users">
@@ -199,11 +210,11 @@
 											<a href="my_dashboard_all_requests.html" class="view-all">View All Friend Requests</a>
 										</div>	
 									</div> -->
-								<!-- </li>
+								</li>
 								<li class="dropdown">
 									<a href="#" class="icon-set dropdown-toggle-no-caret" role="button" data-toggle="dropdown">
 										<i class="fas fa-envelope"></i>
-									</a> -->
+									</a>
 									<!-- <div class="dropdown-menu message-dropdown dropdown-menu-right">
 										<div class="user-request-list">
 											<div class="request-users">
@@ -242,11 +253,11 @@
 											<a href="my_dashboard_messages.html" class="view-all">View All Messages</a>
 										</div>	
 									</div> -->
-								<!-- </li>
+								</li>
 								<li class="dropdown">
 									<a href="#" class="icon-set dropdown-toggle-no-caret" role="button" data-toggle="dropdown">
 										<i class="fas fa-bell"></i>
-									</a> -->
+									</a>
 									<div class="dropdown-menu notification-dropdown dropdown-menu-right">
 										<!-- <div class="user-request-list">
 											<div class="request-users">
@@ -281,25 +292,25 @@
 												<div class="time5">10 min ago</div>
 											</div>											 -->
 										<!-- </div>	 -->
-										<!-- <div class="user-request-list">
+										<div class="user-request-list">
 											<a href="my_dashboard_all_notifications.html" class="view-all">View All Notifications</a>
-										</div>	 -->
+										</div>	
 									</div>
 								</li>
 							</ul>
 							<div class="account order-1 dropdown">
 								<a href="#" class="account-link dropdown-toggle-no-caret" role="button" data-toggle="dropdown"> 
-									<div class="user-dp"><img src="images/propic.jpg" alt=""></div>
-									<span>Hi <%=user.first%><%=user.last%>!</span>
+									<div class="user-dp"><img src="images/dp.jpg" alt=""></div>
+									<span>Hi! John</span>
 									<i class="fas fa-angle-down"></i>
 								</a>
 								<div class="dropdown-menu account-dropdown dropdown-menu-right">
 									<a class="link-item" href="my_dashboard_activity.html">Profile</a>
-									<!-- <a class="link-item" href="my_dashboard_messages.html">Messages</a>											
+									<a class="link-item" href="my_dashboard_messages.html">Messages</a>											
 									<a class="link-item" href="my_dashboard_booked_events.html">Booked Events</a>
-									<a class="link-item" href="invite.html">Invite</a> -->
-									<a class="link-item" href="/my-dashboard-setting">Setting</a>
-									<a class="link-item" href="/login">Logout</a>									
+									<a class="link-item" href="invite.html">Invite</a>
+									<a class="link-item" href="my_dashboard_setting_info.html">Setting</a>
+									<a class="link-item" href="login.html">Logout</a>									
 								</div>
 							</div>							
 						</nav>
@@ -315,9 +326,8 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<ol class="title-bar-text">
-							<li class="breadcrumb-item"><a href="/main">Home</a></li>
-							<li class="breadcrumb-item"><a href="/discussions">Discussion</a></li>
-							<li class="breadcrumb-item active" aria-current="page"><%=info.name%></li>
+							<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+							<li class="breadcrumb-item active" aria-current="page">Discussion</li>
 						</ol>
 					</div>		
 				</div>		
@@ -329,7 +339,7 @@
 			<div class="main-section">
 				<div class="container">
 					<div class="row">
-						<div class="col-lg-3 col-md-4">
+						<div class="col-lg-3 col-md-5">
 							<button class="add-topic" type="button" data-toggle="modal" data-target="#add-discussion-model">Add New Topic</button>
 							<div class="topic-categories-bg">								
 								<a href="#" class="category-topics active">All</a>																					
@@ -371,183 +381,272 @@
 								<a href="#" class="category-topics">Latest</a>								
 								<a href="#" class="category-topics">New(22)</a>								
 								<a href="#" class="category-topics">Unread(3)</a>								
-								<a href="#" class="category-topics">Top</a>	
-								
-								<h1>test</h1>
+								<a href="#" class="category-topics">Top</a>																							
 							</div>
 							<div class="google-ads-left">
 								<img src="images/discussion/ads.jpg" alt="">
 							</div>
 						</div>
-						<div class="col-lg-9 col-md-8">	
-							<div class="all-discussions">									
-								<div class="single-discussions-item">
-									<div class="dis-item-view">
+						<div class="col-lg-9 col-md-7">	
+							<div class="all-discussions">
+								<div class="discussion-heading">
+									<h2>All Discussions</h2>
+								</div>	
+								<div class="all-discussions-items">
+									<div class="dis-item">
 										<div class="row no-gutters">
-											<div class="col-lg-12 col-md-12 col-sm-12">
-												<div class="dis-img-text-view">
+											<div class="col-lg-8 col-md-12 col-sm-12">
+												<div class="dis-img-text">
 													<img src="images/discussion/img-1.jpg" alt="">
-													<a href="#"><h4><%= user.first %> <%= user.last %> </h4></a>
+													<a href="single_discussion_view.html"><h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4></a>
 												</div>
-												<div class="dis-title">
-													<h2><%= info.name %> <h2>
-                                                    <h1> <%= info.description %> </h1>
-													<p></p>
-													<button type="submit" id="delete">Delete <span class="id" style="display:none;" ><%=info._id%></span></button> 
-
-												</div>
-												<div class="dis-like-comments">
-													<div class="left-comments">
-														<a href="#" class="like-item" title="Like">
-															<i class="fas fa-heart"></i>
-															<span><ins>Like</ins> 12</span>
-
-														</a>
-														<a href="#" class="like-item lc-left" title="Comment">
-															<i class="fas fa-comment-alt"></i>
-															<span><ins>Reply</ins> 01</span>
-														</a>
-													</div>
-													<div class="right-comments">
-														<a href="#" class="like-item" title="Share">
-															<i class="fas fa-eye"></i>
-															<span><ins>View</ins> 20</span>
-														</a>
-														<a href="#" class="like-item lc-left" title="Share">
-															<i class="fas fa-share-alt"></i>
-															<span><ins>Share link</ins> 05</span>
-														</a>
-													</div>
-												</div>
-												<div class="main-reply-comment">
-													<h4>Reply</h4>
-													<form id="newComment" action="/createComment" method="POST">
-														<textarea class="replt-comnt" placeholder="Write a reply" name="comment" form="newComment"></textarea>
-														<div class="reply-buttons">
-															<div class="add-photo-button">
-																<div class="screnshot" id="OpenImgUpload">
-																	<input type="file" id="file">
-																	<label for="file"><i class="far fa-image"></i> Add Image</label>														
-																</div>
-															</div>														
-															<div class="post-reply-btn">
-																<button class="btn-add-reply">Post</button>
-															</div>
-														</div>
-													</form>
-												</div>
-												<div class="main-replies">
-
-													<h4> Replies</h4>
-													<div class="reply-user-dt">
-														<%for (i = 0; i < comments.length; i++) { %>
-															<img src="images/discussion/img-3.jpg" alt="">
-															<a href="#"><h4><%=user.first%><%=user.last%></h4></a>
-														<p><%=comments[i].comment%></p>
-													<%}%>
-													</div>
-												</div>
-											</div>												
+											</div>	
+											<div class="col-lg-4 col-md-12 col-sm-12">
+												<ul class="dis-reviews">
+													<li>
+														<a href="#">5 h</a>
+													</li>
+													<li>
+														<a href="#">3k views</a>
+													</li>
+													<li>
+														<a href="#">5 replies</a>
+													</li>
+												</ul>												
+											</div>	
 										</div>	
-									</div>																										
-								</div>															
+									</div>
+									<div class="dis-item">
+										<div class="row no-gutters">
+											<div class="col-lg-8 col-md-12 col-sm-12">
+												<div class="dis-img-text">
+													<img src="images/discussion/img-2.jpg" alt="">
+													<a href="single_discussion_view.html"><h4>ellentesque vitae metus at neque cursus finibus.</h4></a>
+												</div>
+											</div>	
+											<div class="col-lg-4 col-md-12 col-sm-12">
+												<ul class="dis-reviews">
+													<li>
+														<a href="#">6 h</a>
+													</li>
+													<li>
+														<a href="#">6k views</a>
+													</li>
+													<li>
+														<a href="#">10 replies</a>
+													</li>
+												</ul>												
+											</div>	
+										</div>	
+									</div>
+									<div class="dis-item">
+										<div class="row no-gutters">
+											<div class="col-lg-8 col-md-12 col-sm-12">
+												<div class="dis-img-text">
+													<img src="images/discussion/img-3.jpg" alt="">
+													<a href="single_discussion_view.html"><h4>Cras vel lorem gravida, ullamcorper mi sed.</h4></a>
+												</div>
+											</div>	
+											<div class="col-lg-4 col-md-12 col-sm-12">
+												<ul class="dis-reviews">
+													<li>
+														<a href="#">6 h</a>
+													</li>
+													<li>
+														<a href="#">7k views</a>
+													</li>
+													<li>
+														<a href="#">15 replies</a>
+													</li>
+												</ul>												
+											</div>	
+										</div>	
+									</div>
+									<div class="dis-item">
+										<div class="row no-gutters">
+											<div class="col-lg-8 col-md-12 col-sm-12">
+												<div class="dis-img-text">
+													<img src="images/discussion/img-4.jpg" alt="">
+													<a href="single_discussion_view.html"><h4>Obortis risus. Nunc egestas arcu sit amet blandit finibus.</h4></a>
+												</div>
+											</div>	
+											<div class="col-lg-4 col-md-12 col-sm-12">
+												<ul class="dis-reviews">
+													<li>
+														<a href="#">7 h</a>
+													</li>
+													<li>
+														<a href="#">10k views</a>
+													</li>
+													<li>
+														<a href="#">50 replies</a>
+													</li>
+												</ul>												
+											</div>	
+										</div>	
+									</div>
+									<div class="dis-item">
+										<div class="row no-gutters">
+											<div class="col-lg-8 col-md-12 col-sm-12">
+												<div class="dis-img-text">
+													<img src="images/discussion/img-5.jpg" alt="">
+													<a href="single_discussion_view.html"><h4>Quisque in purus ut velit facilisis consequat ac id eros. </h4></a>
+												</div>
+											</div>	
+											<div class="col-lg-4 col-md-12 col-sm-12">
+												<ul class="dis-reviews">
+													<li>
+														<a href="#">7 h</a>
+													</li>
+													<li>
+														<a href="#">7.5k views</a>
+													</li>
+													<li>
+														<a href="#">48 replies</a>
+													</li>
+												</ul>												
+											</div>	
+										</div>	
+									</div>
+									<div class="dis-item">
+										<div class="row no-gutters">
+											<div class="col-lg-8 col-md-12 col-sm-12">
+												<div class="dis-img-text">
+													<img src="images/discussion/img-6.jpg" alt="">
+													<a href="single_discussion_view.html"><h4>Pellentesque semper urna est, non egestas massa vestibulum a.</h4></a>
+												</div>
+											</div>	
+											<div class="col-lg-4 col-md-12 col-sm-12">
+												<ul class="dis-reviews">
+													<li>
+														<a href="#">8 h</a>
+													</li>
+													<li>
+														<a href="#">8k views</a>
+													</li>
+													<li>
+														<a href="#">60 replies</a>
+													</li>
+												</ul>												
+											</div>	
+										</div>	
+									</div>
+									<div class="dis-item">
+										<div class="row no-gutters">
+											<div class="col-lg-8 col-md-12 col-sm-12">
+												<div class="dis-img-text">
+													<img src="images/discussion/img-7.jpg" alt="">
+													<a href="single_discussion_view.html"><h4>Nunc maximus mauris non tincidunt tincidunt.</h4></a>
+												</div>
+											</div>	
+											<div class="col-lg-4 col-md-12 col-sm-12">
+												<ul class="dis-reviews">
+													<li>
+														<a href="#">9 h</a>
+													</li>
+													<li>
+														<a href="#">8.2k views</a>
+													</li>
+													<li>
+														<a href="#">52 replies</a>
+													</li>
+												</ul>												
+											</div>	
+										</div>	
+									</div>
+									<div class="dis-item">
+										<div class="row no-gutters">
+											<div class="col-lg-8 col-md-12 col-sm-12">
+												<div class="dis-img-text">
+													<img src="images/discussion/img-8.jpg" alt="">
+													<a href="single_discussion_view.html"><h4>Sed vehicula, ligula quis efficitur suscipit, risus diam ultrices nisi.</h4></a>
+												</div>
+											</div>	
+											<div class="col-lg-4 col-md-12 col-sm-12">
+												<ul class="dis-reviews">
+													<li>
+														<a href="#">9 h</a>
+													</li>
+													<li>
+														<a href="#">9k views</a>
+													</li>
+													<li>
+														<a href="#">65 replies</a>
+													</li>
+												</ul>												
+											</div>	
+										</div>	
+									</div>
+									<div class="dis-item">
+										<div class="row no-gutters">
+											<div class="col-lg-8 col-md-12 col-sm-12">
+												<div class="dis-img-text">
+													<img src="images/discussion/img-9.jpg" alt="">
+													<a href="single_discussion_view.html"><h4>Etiam blandit, nisl sit amet mollis gravida, est ante porttitor dolor.</h4></a>
+												</div>
+											</div>	
+											<div class="col-lg-4 col-md-12 col-sm-12">
+												<ul class="dis-reviews">
+													<li>
+														<a href="#">10 h</a>
+													</li>
+													<li>
+														<a href="#">11k views</a>
+													</li>
+													<li>
+														<a href="#">95 replies</a>
+													</li>
+												</ul>												
+											</div>	
+										</div>	
+									</div>
+									<div class="dis-item">
+										<div class="row no-gutters">
+											<div class="col-lg-8 col-md-12 col-sm-12">
+												<div class="dis-img-text">
+													<img src="images/discussion/img-10.jpg" alt="">
+													<a href="single_discussion_view.html"><h4>Maecenas erat augue, venenatis vel lacus nec, blandit volutpat nisl.</h4></a>
+												</div>
+											</div>	
+											<div class="col-lg-4 col-md-12 col-sm-12">
+												<ul class="dis-reviews">
+													<li>
+														<a href="#">11 h</a>
+													</li>
+													<li>
+														<a href="#">10k views</a>
+													</li>
+													<li>
+														<a href="#">105 replies</a>
+													</li>
+												</ul>												
+											</div>	
+										</div>	
+									</div>
+									<div class="blog-pagination">
+										<nav aria-label="Page navigation example">
+											<ul class="pagination">
+												<li class="page-item">
+													<a class="page-link" href="#" aria-label="Previous">
+														<i class="fas fa-angle-left"></i>
+													</a>
+												</li>
+												<li class="page-item active"><a class="page-link" href="#">1</a></li>
+												<li class="page-item"><a class="page-link" href="#">2</a></li>
+												<li class="page-item"><a class="page-link" href="#">3</a></li>
+												<li class="page-item"><a class="page-link" href="#">...</a></li>
+												<li class="page-item"><a class="page-link" href="#">12</a></li>												
+												<li class="page-item">
+													<a class="page-link" href="#" aria-label="Next">
+														<i class="fas fa-angle-right"></i>
+													</a>
+												</li>
+											</ul>
+										</nav>
+									</div>
+								</div>																
 							</div>	
-						</div>						
-					</div>
-					<div class="container">
-						<div class="row">
-							<div class="col-lg-12">
-								<div class="help-people-title">
-									<h2>Can You Help These People?</h2>
-								</div>							
-							</div>
-							<div class="owl-carousel blog-owl owl-theme">
-								<div class="item">
-									<div class="people-dts">
-										<img src="images/discussion/people-1.jpg" alt="">
-										<div class="reply-day">1 day</div>
-										<a href="#"><h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4></a>
-										<div class="rply-share">
-											<div class="left-comments">
-												<a href="#" class="like-item" title="Like">
-													<i class="fas fa-heart"></i>
-													<span><ins>Like</ins> 12</span>
-												</a>														
-											</div>
-											<div class="right-comments">
-												<a href="#" class="like-item lc-left" title="Comment">
-													<i class="fas fa-comment-alt"></i>
-													<span><ins>Reply</ins> 01</span>
-												</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="item">
-									<div class="people-dts">
-										<img src="images/discussion/people-2.jpg" alt="">
-										<div class="reply-day">1 day</div>
-										<a href="#"><h4>I want to work in my community.</h4></a>
-										<div class="rply-share">
-											<div class="left-comments">
-												<a href="#" class="like-item" title="Like">
-													<i class="fas fa-heart"></i>
-													<span><ins>Like</ins> 12</span>
-												</a>														
-											</div>
-											<div class="right-comments">
-												<a href="#" class="like-item lc-left" title="Comment">
-													<i class="fas fa-comment-alt"></i>
-													<span><ins>Reply</ins> 01</span>
-												</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="item">
-									<div class="people-dts">
-										<img src="images/discussion/people-3.jpg" alt="">
-										<div class="reply-day">1 day</div>
-										<a href="#"><h4>underestIMadeIt.</h4></a>
-										<div class="rply-share">
-											<div class="left-comments">
-												<a href="#" class="like-item" title="Like">
-													<i class="fas fa-heart"></i>
-													<span><ins>Like</ins> 12</span>
-												</a>														
-											</div>
-											<div class="right-comments">
-												<a href="#" class="like-item lc-left" title="Comment">
-													<i class="fas fa-comment-alt"></i>
-													<span><ins>Reply</ins> 01</span>
-												</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="item">
-									<div class="people-dts">
-										<img src="images/discussion/people-4.jpg" alt="">
-										<div class="reply-day">1 day</div>
-										<a href="#"><h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4></a>
-										<div class="rply-share">
-											<div class="left-comments">
-												<a href="#" class="like-item" title="Like">
-													<i class="fas fa-heart"></i>
-													<span><ins>Like</ins> 12</span>
-												</a>														
-											</div>
-											<div class="right-comments">
-												<a href="#" class="like-item lc-left" title="Comment">
-													<i class="fas fa-comment-alt"></i>
-													<span><ins>Reply</ins> 01</span>
-												</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+						</div>												
 					</div>
 				</div>
 			</div>
@@ -567,24 +666,29 @@
 							</ul>
 						</div>
 					</div>					
-					
+					<div class="col-lg-6 col-md-12">
+						<div class="footer-right">
+							<ul class="copyright-text">
+								<li><a href="index.html"><img src="images/logo-2.svg" alt=""></a></li>
+								<li><div class="ftr-1"><i class="far fa-copyright"></i> 2019 Goeveni by <a href="https://themeforest.net/user/gambolthemes">Gambolthemes</a>. All Rights Reserved.</div></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
 		</footer>
-		<!-- Footer End -->
+		<!-- Footer End -->		
 		<!-- Scripts js -->	
-		<script src="/js/jquery.min.js"></script>
-		<script src="/js/skills-search.js"></script>
-		<script src="/js/jquery.nice-select.js"></script>
-		<script src="/js/datepicker.min.js"></script>
-		<script src="/js/i18n/datepicker.en.js"></script>
-		<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-		<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-		<script src="/vendor/OwlCarousel/owl.carousel.js"></script>		
-		<script src="/js/custom1.js"></script>
-		<script src="/js/sdv.js"></script>
-		
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skills-search.js"></script>
+		<script src="js/jquery.nice-select.js"></script>
+		<script src="js/datepicker.min.js"></script>
+		<script src="js/i18n/datepicker.en.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="vendor/OwlCarousel/owl.carousel.js"></script>		
+		<script src="js/custom1.js"></script>	
+					
 	</body>
 	
-</html>
+</html> -->
