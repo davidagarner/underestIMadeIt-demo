@@ -13,13 +13,13 @@
 		<link rel="icon" type="image/png" href="images/fav.png">
 		
 		<!-- Stylesheets -->
-		<link href="css/responsive.css" rel="stylesheet">
-		<link href="css/style.css" rel="stylesheet">
-		<link href="css/datepicker.min.css" rel="stylesheet">
-		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-		<link href="vendor/OwlCarousel/assets/owl.carousel.css" rel="stylesheet">
-		<link href="vendor/OwlCarousel/assets/owl.theme.default.min.css" rel="stylesheet">
+		<link href="/css/responsive.css" rel="stylesheet">
+		<link href="/css/style.css" rel="stylesheet">
+		<link href="/css/datepicker.min.css" rel="stylesheet">
+		<link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+		<link href="/vendor/OwlCarousel/assets/owl.carousel.css" rel="stylesheet">
+		<link href="/vendor/OwlCarousel/assets/owl.theme.default.min.css" rel="stylesheet">
 	
 	</head>
 
@@ -154,20 +154,7 @@
 									<li class="nav-item">
 										<a class="nav-link" href="/about">About</a>
 									</li>
-									<!-- <li class="nav-item dropdown">
-										<a href="#" class="nav-link dropdown-toggle-no-caret" role="button" data-toggle="dropdown">
-											Pages
-										</a>
-										<div class="dropdown-menu pages-dropdown">
-											<a class="link-item" href="/login">Login</a>
-											<a class="link-item" href="/signup">Register</a>											
-											<a class="link-item" href="categories.html">Support</a>
-											<a class="link-item" href="find_friends.html">Find Friends</a>
-											<a class="link-item" href="user_dashboard_activity.html">User Detail View</a>
-											<a class="link-item" href="about.html">About</a>
-											<a class="link-item" href="contact_us.html">Contact</a>
-										</div>
-									</li> -->
+							
 									<li class="nav-item">
 										<a class="nav-link" href="our_blog.html">Blog</a>
 									</li>
@@ -330,7 +317,7 @@
 						<ol class="title-bar-text">
 							<li class="breadcrumb-item"><a href="/main">Home</a></li>
 							<li class="breadcrumb-item"><a href="/discussions">Discussion</a></li>
-							<li class="breadcrumb-item active" aria-current="page">Single Discussion View</li>
+							<li class="breadcrumb-item active" aria-current="page"><%=info.name%></li>
 						</ol>
 					</div>		
 				</div>		
@@ -405,7 +392,7 @@
 												<div class="dis-title">
 													<h2><%= info.name %> <h2>
                                                     <h1> <%= info.description %> </h1>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel erat eget purus vestibulum malesuada. Aliquam convallis metus et consectetur varius. Fusce velit ligula, imperdiet vitae vestibulum ut, porta non mi. Etiam justo odio, maximus nec rutrum quis, luctus at orci. Aliquam erat volutpat. Sed eu aliquet justo. Cras lectus nulla, aliquam eget tempus pulvinar, auctor non turpis. Proin semper, justo at faucibus suscipit, metus libero blandit neque, eu mattis tortor diam in risus. Donec fringilla venenatis libero in efficitur.</p>
+													<p></p>
 													<button type="submit" id="delete">Delete <span class="id" style="display:none;" ><%=info._id%></span></button> 
 
 												</div>
@@ -451,7 +438,7 @@
 												</div>
 												<div class="main-replies">
 
-													<h4>1 Replies</h4>
+													<h4> Replies</h4>
 													<div class="reply-user-dt">
 														<%for (i = 0; i < comments.length; i++) { %>
 															<img src="images/discussion/img-3.jpg" alt="">
@@ -500,7 +487,7 @@
 									<div class="people-dts">
 										<img src="images/discussion/people-2.jpg" alt="">
 										<div class="reply-day">1 day</div>
-										<a href="#"><h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4></a>
+										<a href="#"><h4>I want to work in my community.</h4></a>
 										<div class="rply-share">
 											<div class="left-comments">
 												<a href="#" class="like-item" title="Like">
@@ -521,7 +508,7 @@
 									<div class="people-dts">
 										<img src="images/discussion/people-3.jpg" alt="">
 										<div class="reply-day">1 day</div>
-										<a href="#"><h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4></a>
+										<a href="#"><h4>underestIMadeIt.</h4></a>
 										<div class="rply-share">
 											<div class="left-comments">
 												<a href="#" class="like-item" title="Like">
@@ -581,21 +568,22 @@
 						</div>
 					</div>					
 					
+					</div>
 				</div>
 			</div>
 		</footer>
 		<!-- Footer End -->
 		<!-- Scripts js -->	
-		<script src="js/jquery.min.js"></script>
-		<script src="js/skills-search.js"></script>
-		<script src="js/jquery.nice-select.js"></script>
-		<script src="js/datepicker.min.js"></script>
-		<script src="js/i18n/datepicker.en.js"></script>
-		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-		<script src="vendor/OwlCarousel/owl.carousel.js"></script>		
-		<script src="js/custom1.js"></script>
-		<script src="js/sdv.js"></script>
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/skills-search.js"></script>
+		<script src="/js/jquery.nice-select.js"></script>
+		<script src="/js/datepicker.min.js"></script>
+		<script src="/js/i18n/datepicker.en.js"></script>
+		<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="/vendor/OwlCarousel/owl.carousel.js"></script>		
+		<script src="/js/custom1.js"></script>
+		<script src="/js/sdv.js"></script>
 		
 	</body>
 	
